@@ -1,25 +1,34 @@
 #include <iostream>
 #include <string>
-#include stdafx.h
+#include "stdafx.h"
 #include "degree.h"
 using namespace std;
 
+#ifndef STUDENT_H
+#define STUDENT_H
+
 class Student {
    public:
+      //Default Constructor for ALL (7) input parameters
+      student();
+
+      //Constructor for ALL (7) input parameters
+      student(string studentId, string firstName, string lastName, string emailAddress, int studentAge, int course1, int course2, int course3, DegreeProgram degreeProgram);
+
       //"Set" & "Get" functions for studentId
-      void SetStudentId(std::string studentId);
+      void SetStudentId(string studentId);
       string GetStudentId() const;
 
       //"Set" & "Get" functions for firstName
-      void SetFirstName(std::string firstName);
+      void SetFirstName(string firstName);
       string GetFirstName() const;
 
       //"Set" & "Get" functions for lastName
-      void SetLastName(std::string lastName);
+      void SetLastName(string lastName);
       string GetLastName() const;
 
       //"Set" & "Get" functions for emailAddress
-      void SetEmailAddress(std::string emailAddress);
+      void SetEmailAddress(string emailAddress);
       string GetEmailAddress() const;
 
       //"Set" & "Get" functions for studentAge
@@ -36,11 +45,10 @@ class Student {
 
 
    private:
-      std::string studentId;
-      std::string firstName;
-      std::string lastName;
-      std::string emailAddress;
+      string studentId, firstName, lastName, emailAddress;
       int studentAge;
-      std::vector daysPerCourse;
+      vector daysPerCourse;
       DegreeProgram degreeProgram;
 };
+
+#endif

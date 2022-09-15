@@ -1,4 +1,11 @@
 #include <iostream>
 #include <string>
-#include stdafx.h
+#include "stdafx.h"
 using namespace std;
+
+#ifndef ROSTER_H
+#define ROSTER_H
+
+
+
+#endif

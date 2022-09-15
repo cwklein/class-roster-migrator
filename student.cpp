@@ -1,12 +1,12 @@
 
 #include <iostream>
 #include <string>
-#include stdafx.h
+#include "stdafx.h"
 #include "student.h"
 #include "degree.h"
 using namespace std;
 
-//Default Constructor for ALL (7) input parameters
+//Default Constructor for ALL (7) input parameters; ints default to -1
 student::student() {
    studentId = "No ID";
    firstName = "No First Name";
@@ -17,9 +17,22 @@ student::student() {
    degreeProgram = "No Degree";
 }
 
+//Constructor for ALL (7) input parameters
+student::student(string studentId,string firstName, string lastName, string emailAddress, int studentAge, int course1, int course2, int course3, DegreeProgram degreeProgram) {
+   this-> studentId = studentId;
+   this-> firstName = firstName;
+   this-> lastName = lastName;
+   this-> emailAddress = emailAddress;
+   this-> studentAge = studentAge;
+   daysPerCourse.at(0) = course1;
+   daysPerCourse.at(1) = course2;
+   daysPerCourse.at(2) = course3;
+   this -> degreeProgram = degreeProgram;
+}
+
 //"Set" & "Get" functions for studentId
-void student::SetStudentId(std::string studentId) {
-   this->studentId = studentId;
+void student::SetStudentId(string studentId) {
+   this-> studentId = studentId;
 }
 
 string student::GetStudentId() const {
@@ -27,8 +40,8 @@ string student::GetStudentId() const {
 }
 
 //"Set" & "Get" functions for firstName
-void student::SetFirstName(std::string firstName) {
-   this->firstName = tempFirstName;
+void student::SetFirstName(string firstName) {
+   this-> firstName = tempFirstName;
 }
 
 string student::GetFirstName() const {
@@ -36,8 +49,8 @@ string student::GetFirstName() const {
 }
 
 //"Set" & "Get" functions for lastName
-void student::SetLastName(std::string lastName) {
-   this->lastName = tempLastName;
+void student::SetLastName(string lastName) {
+   this-> lastName = tempLastName;
 }
 
 string student::GetLastName() const {
@@ -45,8 +58,8 @@ string student::GetLastName() const {
 }
 
 //"Set" & "Get" functions for emailAddress
-void student::SetEmailAddress(std::string emailAddress) {
-   this->emailAddress = emailAddress;
+void student::SetEmailAddress(string emailAddress) {
+   this-> emailAddress = emailAddress;
 }
 
 string student::GetEmailAddress() const {
@@ -55,7 +68,7 @@ string student::GetEmailAddress() const {
 
 //"Set" & "Get" functions for studentAge
 void student::SetStudentAge(int studentAge) {
-   this->studentAge = studentAge;
+   this-> studentAge = studentAge;
 }
 
 int student::GetStudentAge() const {
@@ -75,7 +88,7 @@ vector student::GetDaysPerCourse() const {
 
 //"Set" & "Get" functions for degreeProgram
 void student::SetDegreeProgram(DegreeProgram degreeProgram) {
-   this->degreeProgram = degreeProgram; // FIXME?
+   this-> degreeProgram = degreeProgram; // FIXME?
 }
 
 DegreeProgram student::GetDegreeProgram() const { // FIXME?

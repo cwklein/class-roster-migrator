@@ -1,8 +1,11 @@
 #include <iostream>
 #include <string>
-#include stdafx.h
+#include "stdafx.h"
 using namespace std;
+
+#ifndef DEGREE_H
+#define DEGREE_H
 
 enum DegreeProgram {SECURITY, NETWORK, SOFTWARE};
 
-//git Test
+#endif
