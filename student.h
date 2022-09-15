@@ -8,39 +8,39 @@ class Student {
    public:
       //"Set" & "Get" functions for studentId
       void SetStudentId(std::string studentId);
-      string GetStudentId();
+      string GetStudentId() const;
 
       //"Set" & "Get" functions for firstName
       void SetFirstName(std::string firstName);
-      string GetFirstName();
+      string GetFirstName() const;
 
       //"Set" & "Get" functions for lastName
       void SetLastName(std::string lastName);
-      string GetLastName();
+      string GetLastName() const;
 
       //"Set" & "Get" functions for emailAddress
       void SetEmailAddress(std::string emailAddress);
-      string GetEmailAddress();
+      string GetEmailAddress() const;
 
       //"Set" & "Get" functions for studentAge
       void SetStudentAge(int studentAge);
-      int GetStudentAge();
+      int GetStudentAge() const;
 
       //"Set" & "Get" functions for daysPerCourse
       void SetDaysPerCourse(int course1, int course2, int course3);
-      vector GetDaysPerCourse();
+      vector GetDaysPerCourse() const;
 
       //"Set" & "Get" functions for degreeProgram
       void SetDegreeProgram(DegreeProgram degreeProgram);
-      string GetDegreeProgram();
+      string GetDegreeProgram() const;
 
 
    private:
-      std::string studentId = "No ID";
-      std::string firstName = "No First Name";
-      std::string lastName = "No Last Name";
-      std::string emailAddress = "No Email Address";
-      int studentAge = "No Age";
-      std::vector daysPerCourse(3, -1);
-      DegreeProgram degreeProgram = "No Degree";
+      std::string studentId;
+      std::string firstName;
+      std::string lastName;
+      std::string emailAddress;
+      int studentAge;
+      std::vector daysPerCourse;
+      DegreeProgram degreeProgram;
 };

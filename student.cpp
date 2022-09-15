@@ -6,48 +6,59 @@
 #include "degree.h"
 using namespace std;
 
-//"Set" & "Get" functions for studentId
-void student::SetStudentId(std::string tempStudentId) {
-   studentId = tempStudentId;
+//Default Constructor for ALL (7) input parameters
+student::student() {
+   studentId = "No ID";
+   firstName = "No First Name";
+   lastName = "No Last Name";
+   emailAddress = "No Email Address";
+   studentAge = -1;
+   daysPerCourse(3, -1);
+   degreeProgram = "No Degree";
 }
 
-string student::GetStudentId() {
+//"Set" & "Get" functions for studentId
+void student::SetStudentId(std::string studentId) {
+   this->studentId = studentId;
+}
+
+string student::GetStudentId() const {
    return studentId;
 }
 
 //"Set" & "Get" functions for firstName
-void student::SetFirstName(std::string tempFirstName) {
-   firstName = tempFirstName;
+void student::SetFirstName(std::string firstName) {
+   this->firstName = tempFirstName;
 }
 
-string student::GetFirstName() {
+string student::GetFirstName() const {
    return firstName;
 }
 
 //"Set" & "Get" functions for lastName
-void student::SetLastName(std::string tempLastName) {
-   lastName = tempLastName;
+void student::SetLastName(std::string lastName) {
+   this->lastName = tempLastName;
 }
 
-string student::GetLastName() {
+string student::GetLastName() const {
    return lastName;
 }
 
 //"Set" & "Get" functions for emailAddress
-void student::SetEmailAddress(std::string tempEmailAddress) {
-   emailAddress = tempEmailAddress;
+void student::SetEmailAddress(std::string emailAddress) {
+   this->emailAddress = emailAddress;
 }
 
-string student::GetEmailAddress() {
+string student::GetEmailAddress() const {
    return emailAddress;
 }
 
 //"Set" & "Get" functions for studentAge
-void student::SetStudentAge(int tempStudentAge) {
-   studentAge = tempStudentAge;
+void student::SetStudentAge(int studentAge) {
+   this->studentAge = studentAge;
 }
 
-int student::GetStudentAge() {
+int student::GetStudentAge() const {
    return studentAge;
 }
 
@@ -58,15 +69,15 @@ void student::SetDaysPerCourse(int course1, int course2, int course3) {
    daysPerCourse.at(2) = course3;
 }
 
-vector student::GetDaysPerCourse() {
+vector student::GetDaysPerCourse() const {
    return daysPerCourse;
 }
 
 //"Set" & "Get" functions for degreeProgram
-void student::SetDegreeProgram(DegreeProgram tempDegreeProgram) {
-   degreeProgram = tempDegreeProgram; // FIXME?
+void student::SetDegreeProgram(DegreeProgram degreeProgram) {
+   this->degreeProgram = degreeProgram; // FIXME?
 }
 
-DegreeProgram student::GetDegreeProgram() { // FIXME?
+DegreeProgram student::GetDegreeProgram() const { // FIXME?
    return degreeProgram; // FIXME?
 }
