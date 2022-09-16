@@ -1,6 +1,5 @@
-#include <iostream>
-#include <string>
-#include "stdafx.h"
+#pragma once
+
 using namespace std;
 
 #ifndef DEGREE_H

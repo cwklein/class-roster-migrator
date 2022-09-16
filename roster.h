@@ -1,6 +1,7 @@
+#pragma once
 #include <iostream>
 #include <string>
-#include "stdafx.h"
+#include "student.h"
 using namespace std;
 
 #ifndef ROSTER_H

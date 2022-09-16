@@ -1,4 +1,5 @@
+#pragma once
 #include <iostream>
+#include <string>
 #include "roster.h"
-#include "stdafx.h"
 using namespace std;

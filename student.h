@@ -1,6 +1,6 @@
+#pragma once
 #include <iostream>
 #include <string>
-#include "stdafx.h"
 #include "degree.h"
 using namespace std;
 
@@ -10,10 +10,13 @@ using namespace std;
 class Student {
    public:
       //Default Constructor for ALL (7) input parameters
-      student();
+      Student();
 
       //Constructor for ALL (7) input parameters
-      student(string studentId, string firstName, string lastName, string emailAddress, int studentAge, int course1, int course2, int course3, DegreeProgram degreeProgram);
+      Student(string studentId, string firstName, string lastName, string emailAddress, int studentAge, int course1, int course2, int course3, DegreeProgram degreeProgram);
+
+      //Destructor (Best Practice)
+      ~Student();
 
       //"Set" & "Get" functions for studentId
       void SetStudentId(string studentId);
@@ -37,17 +40,18 @@ class Student {
 
       //"Set" & "Get" functions for daysPerCourse
       void SetDaysPerCourse(int course1, int course2, int course3);
-      vector GetDaysPerCourse() const;
+      int* GetDaysPerCourse(); //FIXME
 
       //"Set" & "Get" functions for degreeProgram
       void SetDegreeProgram(DegreeProgram degreeProgram);
-      string GetDegreeProgram() const;
+      DegreeProgram GetDegreeProgram() const;
+
 
 
    private:
       string studentId, firstName, lastName, emailAddress;
       int studentAge;
-      vector daysPerCourse;
+      int daysPerCourse [3];
       DegreeProgram degreeProgram;
 };
 
