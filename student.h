@@ -12,7 +12,7 @@ class Student {
       Student();
 
       //Constructor for ALL (7) input parameters
-      Student(string studentId, 
+      Student(string studentID, 
          string firstName, 
          string lastName, 
          string emailAddress, 
@@ -24,7 +24,7 @@ class Student {
       ~Student();
 
       //"Get" Functions
-      string GetStudentId() const;
+      string GetStudentID() const;
       string GetFirstName() const;
       string GetLastName() const;
       string GetEmailAddress() const;
@@ -33,7 +33,7 @@ class Student {
       DegreeProgram GetDegreeProgram() const;
 
       //"Set" Functions
-      void SetStudentId(string studentId);
+      void SetStudentID(string studentID);
       void SetFirstName(string firstName);
       void SetLastName(string lastName);
       void SetEmailAddress(string emailAddress);
@@ -46,11 +46,11 @@ class Student {
 
 
    private:
-      string studentId, firstName, lastName, emailAddress;
+      string studentID, firstName, lastName, emailAddress;
       int studentAge;
       int* daysInCourse;
       DegreeProgram degreeProgram;
-      int numCourses = 3;
+      const static int numCourses = 3;
 };
 
 #endif

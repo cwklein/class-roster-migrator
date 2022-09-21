@@ -5,7 +5,7 @@ using namespace std;
 
 //Default Constructor for ALL (7) input parameters; ints default to 0
 Student::Student():
-   studentId(" "),
+   studentID(" "),
    firstName(" "),
    lastName(" "),
    emailAddress(" "),
@@ -19,8 +19,8 @@ Student::Student():
   }
 
 //Constructor for ALL (7) input parameters
-Student::Student(string studentId,string firstName, string lastName, string emailAddress, int studentAge, int daysInCourse[], DegreeProgram degreeProgram) {
-   SetStudentId(studentId);
+Student::Student(string studentID,string firstName, string lastName, string emailAddress, int studentAge, int daysInCourse[], DegreeProgram degreeProgram) {
+   SetStudentID(studentID);
    SetFirstName(firstName);
    SetLastName(lastName);
    SetEmailAddress(emailAddress);
@@ -38,8 +38,8 @@ Student::Student(string studentId,string firstName, string lastName, string emai
 Student::~Student() {};
 
 //"Get" Functions
-string Student::GetStudentId() const {
-   return studentId;
+string Student::GetStudentID() const {
+   return studentID;
 }
 string Student::GetFirstName() const {
    return firstName;
@@ -61,8 +61,8 @@ DegreeProgram Student::GetDegreeProgram() const {
 }
 
 //"Set" Functions
-void Student::SetStudentId(string studentId) {
-   this-> studentId = studentId;
+void Student::SetStudentID(string studentID) {
+   this-> studentID = studentID;
 }
 void Student::SetFirstName(string firstName) {
    this->firstName = firstName;
@@ -88,7 +88,7 @@ void Student::SetDegreeProgram(DegreeProgram degreeProgram) {
 
 //Print function for all student info
 void Student::Print() {
-   cout << this->GetStudentId() << " ";
+   cout << this->GetStudentID() << " ";
    cout << this->GetFirstName() << " ";
    cout << this->GetLastName() << " ";
    cout << this->GetEmailAddress() << " ";
