@@ -74,7 +74,7 @@ void Student::SetEmailAddress(string emailAddress) {
    this->emailAddress = emailAddress;
 }
 void Student::SetStudentAge(int studentAge) {
-   studentAge = studentAge;
+   this->studentAge = studentAge;
 }
 void Student::SetDaysInCourse(int daysInCourse[]) {
    this->daysInCourse = new int[numCourses];
@@ -88,12 +88,12 @@ void Student::SetDegreeProgram(DegreeProgram degreeProgram) {
 
 //Print function for all student info
 void Student::Print() {
-   cout << this->GetStudentID() << " ";
-   cout << this->GetFirstName() << " ";
-   cout << this->GetLastName() << " ";
-   cout << this->GetEmailAddress() << " ";
-   cout << this->GetStudentAge() << " ";
-   cout << "{" << daysInCourse[0] << daysInCourse[1] << daysInCourse[2] << "}" << " ";
+   cout << this->GetStudentID() << "\t";
+   cout << this->GetFirstName() << "\t";
+   cout << this->GetLastName() << "\t";
+   cout << this->GetEmailAddress() << "\t";
+   cout << this->GetStudentAge() << "\t";
+   cout << "{" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "}" << "\t";
    if (this->GetDegreeProgram() == 0) {
       cout << "SECURITY";
    }

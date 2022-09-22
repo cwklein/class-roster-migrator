@@ -10,26 +10,36 @@ int main() {
 
 	cout << "Course Title: C876 - Scripting and Programming - Applications " << endl;
 	cout << "Language used: C++" << endl;
-	cout << "Student: Colby Klein - 001198444" << endl;
+	cout << "Student: Colby Klein - 001198444" << endl << endl;
 
 	Roster classRoster;
 
 	classRoster.parseStudentData(studentData);
 	classRoster.printAll();
+	cout << endl;
 	classRoster.printInvalidEmails();
+	cout << endl;
 	for (int i = 0; i < 5; ++i) {
 		classRoster.printAverageDaysInCourse(classRoster.classRosterArray[i]->GetStudentID());
 	}
+	cout << endl;
 
 	classRoster.printByDegreeProgram(SOFTWARE);
 
-	//classRoster.remove("A3");
+	cout << endl;
+
+	classRoster.remove("A3");
+	cout << endl;
 
 	classRoster.printAll();
-
-	//classRoster.remove("A3");
+	
+	cout << endl;
+	classRoster.remove("A3");
+	
+	cout << endl;
 	//expected: the above line should print a message saying such a student with this ID was not found.
 	
+	//classRoster.~Roster(); -- Called automatically at end of program, dont need to explicitly call
 
 	return 0;
 }

@@ -9,11 +9,11 @@ using namespace std;
 class Roster {
 
    private:
-      int rosterIndex = 0;
-      const static int studentDataSize = 5;
-      
+      int activeRosterSize = 0;
+      const static int maximumRosterSize = 5;
 
    public:
+      ~Roster();
       void parseStudentData(const string studentData[]);
       void add(string studentID, 
          string firstName, 
@@ -27,6 +27,6 @@ class Roster {
       void printAverageDaysInCourse(string studentID);
       void printInvalidEmails();
       void printByDegreeProgram(DegreeProgram degreeProgram);
-      Student* classRosterArray[studentDataSize];
+      Student* classRosterArray[maximumRosterSize];
 };
 #endif
